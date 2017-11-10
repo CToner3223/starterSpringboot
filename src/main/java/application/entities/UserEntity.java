@@ -1,11 +1,11 @@
-package hello.entities;
+package application.entities;
 
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "greetings")
-public class GreetingEntity {
+public class UserEntity {
 
     private @Id
     @GeneratedValue
@@ -17,9 +17,9 @@ public class GreetingEntity {
     @Column(name = "last_name")
     private String lastName;
 
-    private GreetingEntity() {}
+    private UserEntity() {}
 
-    public GreetingEntity(String firstName, String lastName) {
+    public UserEntity(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }

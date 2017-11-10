@@ -1,15 +1,15 @@
-package hello.representations;
+package application.representations;
 
-import hello.entities.GreetingEntity;
+import application.entities.UserEntity;
 
-public class GreetingRepresentation {
+public class UserRepresentation {
 
     private final long id;
     private final String firstName;
     private final String lastName;
 
 
-    public GreetingRepresentation(GreetingEntity retrieved) {
+    public UserRepresentation(UserEntity retrieved) {
         id = retrieved.getId();
         firstName = retrieved.getFirstName();
         lastName = retrieved.getLastName();
