@@ -37,10 +37,10 @@ public class UserControllerTests {
     private MockMvc mockMvc;
 
     @Test
-    public void noParamGreetingShouldReturnDefaultMessage() throws Exception {
+    public void noParamAdd() throws Exception {
 
-        this.mockMvc.perform(get("/greeting")).andDo(print()).andExpect(status().isOk())
-                .andExpect(jsonPath("$.content").value("Hello, World!"));
+        this.mockMvc.perform(get("/add")).andDo(print()).andExpect(status().isOk())
+                .andExpect(jsonPath("$.content").value("{\"id\":1,\"firstName\":\"First\",\"lastName\":\"Last\"}"));
     }
 
     @Test
